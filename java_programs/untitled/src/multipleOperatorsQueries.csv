@@ -1,0 +1,87 @@
+SELECT * FROM employee_information.employees_address; 
+
+/*
+IN,
+Between,
+OR,
+Not Between,
+Like,
+exists,
+Unique */
+
+
+select  ea.id,ea.address,ej.first_name,ej.last_name,es.salary from employees_address ea,employees_job_info ej, employees_salary es
+where es.salary between 10000 and 15000 
+and ea.id=ej.id
+and ea.id =es.id;  
+
+select  ea.id,ea.address,ej.first_name,ej.last_name,es.salary from employees_address ea,employees_job_info ej, employees_salary es
+where es.salary in (10000 ,12000,14000) 
+and ea.id=ej.id
+and ea.id =es.id;  
+
+select  ea.id,ea.address,ej.first_name,ej.last_name,es.salary from employees_address ea,employees_job_info ej, employees_salary es   /* not working */ 
+where salary > 10000 or ea.address = "Pune" 
+and  ea.id=ej.id
+and ea.id =es.id; 
+
+select ea.id,ea.email,ej.gender,ej.department,es.years_of_experience from employees_address ea, employees_job_info ej, employees_salary es
+where ea.id not between 5 and 10
+and ea.id=ej.id
+and ea.id=es.id;  
+
+/*  The percent sign (%) represents zero, one, or multiple characters
+ The underscore sign (_) represents one, single character  */
+
+select es.id,es.salary_increment,ej.first_name,ej.last_name,ea.email from employees_address ea, employees_job_info ej, employees_salary es 
+where salary_increment like "900%"
+and ea.id= ej.id
+and ea.id = es.id; 
+
+select es.id,es.salary_increment,ej.first_name,ej.last_name,ea.email from employees_address ea, employees_job_info ej, employees_salary es 
+where salary_increment like "%000"
+and ea.id= ej.id
+and ea.id = es.id;
+
+
+select es.id,es.salary_increment,ej.first_name,ej.last_name,ea.email from employees_address ea, employees_job_info ej, employees_salary es 
+where salary_increment like "_000"
+and ea.id= ej.id
+and ea.id = es.id;   
+
+/* 
+The EXISTS operator is used to test for the existence of any record in a subquery.
+
+The EXISTS operator returns TRUE if the subquery returns one or more records. */ 
+
+
+select id,address from employees_address 
+where exists ( select id, first_name , last_name from employees_job_info where employees_job_info.id=employees_address.id and address = 'Kurnool');    
+
+select id,first_name,last_name from employees_job_info 
+where exists ( select email from employees_address where employees_address.id=employees_job_info.id) 
+and id <5;
+
+ 
+ /*  SQL UNIQUE Constraint
+ 
+ 
+The UNIQUE constraint ensures that all values in a column are different.
+
+Both the UNIQUE and PRIMARY KEY constraints provide a guarantee for uniqueness for a column or set of columns.
+
+A PRIMARY KEY constraint automatically has a UNIQUE constraint.
+
+However, you can have many UNIQUE constraints per table, but only one PRIMARY KEY constraint per table.   */ 
+
+
+create table games  (
+ game_id int  not null unique,
+ game_type varchar(50) not null,
+ game_size varchar(100),
+ hourly_time time(5)); 
+ 
+ 
+
+ 
+
