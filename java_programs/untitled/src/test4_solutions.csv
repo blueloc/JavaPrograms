@@ -1,0 +1,48 @@
+SELECT * FROM employee_information.employees_address;  
+
+SELECT * FROM employee_information.employees_job_info;
+
+select * from employees_salary;
+
+/*   1.How can I retrieve the employee records for employees named Timmy, with the phone number '881.633.0107',
+ having a job title starting with 'hr', or having 5 years of experience?   */   /* 8439547062  */    /* Getting duplicates  */ 
+ 
+ select * from employees_address ea, employees_job_info ej, employees_salary es 
+ where first_name = 'Tammy' or years_of_experience = 5 or phone_number = '8439547062'  
+ and ea.id = ej.id and ea.id = es.id;
+ 
+ select ea.id,ea.phone_number,ej.job_title,es.years_of_experience from employees_address ea,employees_job_info ej, employees_salary es
+ where phone_number = '881.633.0107' or job_title like 'hr%' OR years_of_experience = '5' and ea.id = ej.id and ea.id = es.id;  
+ 
+ 
+ 
+  /*  2. How can I retrieve the first name, last name, and salary of employees whose salary is between 10000 and 14000.?(use '><=') */ 
+  
+  select ej.first_name,ej.last_name,es.salary from employees_job_info ej, employees_salary es 
+  where salary >= '10000' and salary <= '14000'
+  and ej.id=es.id;   
+  
+  /* 3. Which SQL query should I use to find the employee records for employees with a salary ranging from 10000 to 15000?(use 'between')  */ 
+  
+    select ej.first_name,ej.last_name,es.salary from employees_job_info ej, employees_salary es 
+  where salary between 10000 and 15000
+  and ej.id=es.id;   
+   
+   /* 4. Retrieve the details of employees whose salary is either 15000, 18000, 22000, or 25000. */ 
+   
+   select * from employees_salary 
+   where salary in ('15000', '10000', '12000' , '9000');  
+   
+   /* 5.How many employees have a job title starting with 'hr' or years of experience equal to '5'? */   /* Getting duplicate */
+   
+   select ej.id,ej.job_title,es.years_of_experience from employees_job_info ej, employees_salary es 
+   where job_title like 'hr%' or years_of_experience = '5' 
+   and ej.id = es.id; 
+   
+   /* 6.Can you list the employees whose salaries fall between 10000 and 20000, along with their first names, last names, and salaries? */ 
+   
+   select ej.first_name,ej.last_name,es.salary from employees_job_info ej, employees_salary es 
+   where salary between 10000 and 17000 
+   and ej.id = es.id; 
+  
+ 
