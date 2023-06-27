@@ -1,0 +1,75 @@
+Retrieve the names and job titles of all employees.
+Find the addresses of employees whose job title is " HR Manager."
+List the employees who have a salary higher than $10,000. resut: first and second name and salary
+Show the employee IDs, names, and addresses of employees residing in the city "HYd, kurnool."
+Find the highest salary among all employees. result first and second name and salary
+Show the employees who have been with the company for more than seven years experience.
+Retrieve the addresses of employees who have a salary between 10,000 and 20,000. 
+
+
+
+SELECT * FROM employee_information.employees_job_info;
+
+  /* employee firstname,lastname,address,salaary and phone number ; */
+   /*  Sharon */
+   
+     select ej.id, ej.first_name,ej.last_name , ea.address , es.salary, ea.phone_number from employees_address ea,employees_job_info ej,employees_salary es 
+     where ej.id = 8 and  ej.id = ea.id and ej.id = es.id;
+     
+ /*   1. Retrieve the names and job titles of all employees. */ 
+ 
+ select concat(first_name, " ",last_name) as full_names,job_title from employees_job_info;  
+ 
+ /* 2. Find the addresses of employees whose job title is " HR Manager." */
+ 
+ select ea.address,ej.job_title from employees_job_info ej,employees_address ea
+ where ea.id = ej.id and job_title = "HR Manager";
+ 
+ /* 3.List the employees who have a salary higher than $10,000. resut: first and second name and salary */ 
+ 
+ select ej.first_name,ej.last_name,es.salary from employees_salary es, employees_job_info ej 
+ where es.id = ej.id and salary > 10000;
+ 
+ 
+  /* 4.Show the employee IDs, names, and addresses of employees residing in the city "HYd, kurnool." */ 
+  
+  
+  select ea.id,ea.address,ej.first_name,ej.last_name from employees_address ea , employees_job_info ej 
+  where ea.id = ej.id and address in ("Hyd" , "Kurnool");  
+  
+ 
+ /* 5.Find the highest salary among all employees. result first and second name and salary (not corrected)*/ 
+  
+  select es.salary,ej.first_name,ej.last_name from employees_salary es ,employees_job_info ej
+  where es.salary = (select max(salary) from employees_salary) 
+  and es.id = ej.id;
+  
+  
+  /* 6.Show the employees who have been with the company for more than seven years experience. */
+  
+  select * from employees_address ea,employees_job_info ej, employees_salary es 
+  where years_of_experience >=7 and ea.id=ej.id and ea.id = es.id;
+  
+
+  /* 7.Retrieve the addresses of employees who have a salary between 10,000 and 20,000. */ 
+  
+  select ea.address,es.salary from employees_address ea, employees_salary es
+  where es.salary between 10000 and 20000 and ea.id=es.id;
+  
+  
+
+  
+  
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+     
+     
+     
+     
+     
