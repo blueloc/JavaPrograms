@@ -200,7 +200,7 @@ import java.util.Scanner;
 }     */
 
 
-  public class part4Whileloop  {
+/*  public class part4Whileloop  {
       public static void main(String[] args) {
 
         // 67.Write a program to find the sum of even numbers from 1 to 50 using a while loop.
@@ -216,4 +216,53 @@ import java.util.Scanner;
           }
           System.out.println("THe sum of even numbers from 1 to 50 is " + sum);
       }
+}   */
+
+
+/*  public class part4Whileloop  {
+     public static void main(String[] args) {
+
+         // 68.Write a program to print the ASCII values of all lowercase letters using a while loop.
+
+         char ch;
+         int ascii;
+         ch = 'a';
+         while (ch <='z') {
+             ascii= (int) ch;
+             System.out.println("the ascii values of all lowercase is " + ch + " is :" + ascii);
+             ch++;
+         //    ascii = (int) ch;
+         }
+     }
+}        */
+
+
+
+
+/*  public class part4Whileloop {
+      public static void main(String[] args) {
+
+         //  Write a program to print the ASCII values of all lowercase letters using a while loop.
+
+          char ch='A';
+          int ascii;
+          while (ch <='Z') {
+              ascii= (int) ch;
+              System.out.println("THe Ascill values of all Uppercase " + ch + " is :" + ascii);
+              ch++;
+          }
+      }
+}   */
+
+
+   public class part4Whileloop  {
+       public static void main(String[] args) {
+
+          // 69.Write a program to find the prime numbers between 1 and 100 using a while loop.
+
+          int i=2;
+          while (i<=100) {
+              
+          }
+       }
 }
