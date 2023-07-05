@@ -507,7 +507,7 @@ import java.util.Scanner;
 }     */
 
 
-  public class part4Whileloop  {
+/*  public class part4Whileloop  {
       public static void main(String[] args) {
 
          // 80.Write a Java program to calculate the factorial of a number.
@@ -516,8 +516,208 @@ import java.util.Scanner;
           System.out.println("Enter the number");
           int number = scan.nextInt();
 
-          int fact= number
-
-
+          int factorial = 1;
+          for (int i=1;i<=number;i++) {
+              factorial*=i;
+          }
+          System.out.println("The factorial of the given number is " + factorial );
       }
-}
+}    */
+
+
+
+ /*    public class part4Whileloop  {
+        public static void main(String[] args) {
+
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Enter the number");
+            int number = scan.nextInt();
+
+            int fact=1;
+            for (int i=1;i<=number;i++) {
+                fact = fact * i;  // fact*=i;
+
+
+            }
+            System.out.println("The factorial of given number is " + number + " : " + fact);
+        }
+}           */
+
+
+
+/*  public  class part4Whileloop  {
+      public static void main(String[] args) {
+
+         // 81.Write a Java program to check if a number is even or odd.
+
+         Scanner scan =new Scanner(System.in);
+          System.out.println("Enter the number: ");
+          int number = scan.nextInt();
+
+          if (number % 2 == 0) {
+              System.out.println("This is an even number");
+          } else {
+              System.out.println("This is an odd number");
+          }
+      }
+}    */
+
+
+
+/*  public class part4Whileloop  {
+      public static void main(String[] args) {
+
+         // 82.Write a Java program to check if a number is prime.
+
+          Scanner scan = new Scanner(System.in);
+          System.out.println("Enter the number: ");
+          int number = scan.nextInt();
+
+          boolean isprime =true;
+          for ( int i=2;i<=Math.sqrt(number);i++) {
+              if ( number % 2==0) {
+                  isprime=false;
+                  break;
+              }
+          }
+          if (isprime) {
+              System.out.println("The given number is prime number ");
+          } else {
+              System.out.println("the given number is not a prime number");
+          }
+      }
+}    */
+
+
+
+/*  public class part4Whileloop  {
+      public static void main(String[] args) {
+
+         // 83.Write a Java program to check if a number is positive, negative, or zero.
+
+
+         Scanner scan = new Scanner(System.in);
+          System.out.println("Enter the number: ");
+          int number = scan.nextInt();
+
+          if ( number > 0) {
+              System.out.println("The number is positive");
+          } else if ( number < 0) {
+              System.out.println("The number is negative");
+          } else  {
+              System.out.println("the number is zero");
+          }
+      }
+}          */
+
+
+
+/*  public  class part4Whileloop  {
+     public static void main(String[] args) {
+
+        // 84.Write a Java program to check if a year is a leap year.
+
+        Scanner scan = new Scanner(System.in);
+         System.out.println("Enter the year");
+         int year = scan.nextInt();
+
+         boolean isLeapyear = false;
+         if (year % 4 == 0) {
+               isLeapyear = true;
+         }
+         if ( year % 100 == 0) {
+             isLeapyear = false;
+         }
+         if ( year % 400 == 0) {
+             isLeapyear = true;
+         }
+
+         if (isLeapyear) {
+             System.out.println("This is a leap year");
+         } else {
+             System.out.println("This is not a leap year");
+         }
+
+
+     }
+}          */
+
+
+
+/*  public class part4Whileloop {
+     public static void main(String[] args) {
+
+        // 85.Write a Java program to find the largest among three numbers.
+
+
+        Scanner scan = new Scanner(System.in);
+         System.out.println("Enter the first number: ");
+         int firstNumber = scan.nextInt();
+         System.out.println("Enter the second Number: ");
+         int secondNumber = scan.nextInt();
+         System.out.println("Enter the third number");
+         int thirdNumber = scan.nextInt();
+          int temp = firstNumber > secondNumber ? firstNumber:secondNumber;        // ? means compares
+          int largest = thirdNumber > temp ? thirdNumber:temp;
+
+         System.out.println("THe largest number among three numbers is " + largest);
+
+     }
+}    */
+
+
+/*  public class part4Whileloop  {
+      public static void main(String[] args) {
+
+         // 86.Write a Java program to find the smallest among three numbers.
+
+         Scanner scan =new Scanner(System.in);
+          System.out.println("Enter the first number");
+          int firstNumber = scan.nextInt();
+          System.out.println("Enter the second number");
+          int secondNumber = scan.nextInt();
+          System.out.println("Enter the third number");
+          int thirdNumber = scan.nextInt();
+
+          int temp= firstNumber < secondNumber ? firstNumber:secondNumber;
+          int smallest = thirdNumber < temp ? thirdNumber:temp;
+
+          System.out.println("THe smallest among three numbers is " + smallest);
+      }
+}       */
+
+
+/*  public class part4Whileloop  {
+     public static void main(String[] args) {
+
+        // 87.Write a Java program to calculate the sum of digits of a number.
+
+        Scanner scan = new Scanner(System.in);
+         System.out.println("Enter the number");
+         int number = scan.nextInt();
+
+         int sum;
+         for ( sum=0;number!=0; number = number /10) {
+             sum = sum + number % 10;
+         }
+         System.out.println("sum of digits " + sum);
+     }
+}           */
+
+
+
+ /*  public class part4Whileloop  {
+       public static void main(String[] args) {
+
+
+         Scanner scan = new Scanner(System.in);
+           System.out.println("Enter the number:");
+           int number = scan.nextInt();
+
+           int sum;
+           for (sum=0;number!=0;number = number /10) {
+               sum = sum + number % 10;
+           }
+           System.out.println("The sum of digits is " + sum);
+       }
+}      */
