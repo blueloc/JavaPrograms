@@ -1,5 +1,6 @@
 package test7Part1;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /* public class part5Arrays {
@@ -521,15 +522,107 @@ import java.util.Scanner;
 }          */
 
 
+/*    public class part5Arrays {                           //  no idea ?
+    public static void main(String[] args) {
 
-  public  class part5Arrays  {
-      public static void main(String[] args) {
-
-          // 104.Remove duplicates from an array.
+        // 104.Remove duplicates from an array.
 
 
-      }
-}
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the number of elements of an array");
+        int n = scan.nextInt();
+
+        int[] numbers = new int[n];
+        System.out.println("Enter the elements of an array");
+
+
+        for (int i = 0; i < n; i++) {
+            numbers[i] = scan.nextInt();
+
+
+            int[] uniqueNumbers = part5Arrays(numbers);
+            System.out.println("The unique numbers in the array: ");
+            System.out.println(Arrays.toString(uniqueNumbers));
+
+        }
+
+        private static int[] part5Arrays ( int[] numbers){
+            int[] uniqueNumbers = new int[numbers.length];
+            int j = 0;
+            for (int i = 0; i < numbers.length; i++) {
+                boolean isDuplicate = false;
+
+                for (int k = 0; k < j; k++) {
+                    if (numbers[i] == uniqueNumbers[k]) {
+                        isDuplicate = true;
+                        break;
+                    }
+                }
+                if (!isDuplicate) {
+                    uniqueNumbers[j] = numbers[i];
+                    j++;
+                }
+            }
+            return uniqueNumbers;
+        }
+    }
+
+
+}      */
+
+
+
+
+
+/*   public class part5Arrays {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the number of elements in the array: ");
+        int n = scanner.nextInt();
+
+        int[] numbers = new int[n];
+
+        System.out.println("Enter the elements of the array: ");
+        for (int i = 0; i < n; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+
+        int[] uniqueNumbers = part5Arrays(numbers);
+        System.out.println("The unique numbers in the array are: ");
+        System.out.println(Arrays.toString(uniqueNumbers));
+    }
+
+    private static int[] part5Arrays(int[] numbers) {
+        int[] uniqueNumbers = new int[numbers.length];
+        int j = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            boolean isDuplicate = false;
+            for (int k = 0; k < j; k++) {
+                if (numbers[i] == uniqueNumbers[k]) {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+            if (!isDuplicate) {
+                uniqueNumbers[j] = numbers[i];
+                j++;
+            }
+        }
+        return uniqueNumbers;
+    }
+}              */
+
+
+
+
+
+
+
+
+
+
 
 
 
