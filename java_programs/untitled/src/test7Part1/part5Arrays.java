@@ -413,6 +413,80 @@ import java.util.Scanner;
 
 
 
+/*      public class part5Arrays  {
+          public static void main(String[] args) {
+
+             // 101.Reverse an array.
+
+
+              Scanner scan = new Scanner(System.in);
+              System.out.println("Enter the number of elements of an array");
+              int n= scan.nextInt();
+
+              int []arr = new int[n];
+              System.out.println("Enter the elements of an array");
+
+              for (int i=0;i<n;i++) {
+                  arr[i]=scan.nextInt();
+              }
+
+              int start = 0;
+              int end = n-1;
+
+              while (start <end ) {
+                  int temp = arr[start];
+                  arr[start]=arr[end];
+                  arr[end]= temp;
+
+                  start++;
+                  end--;
+              }
+
+              System.out.println("THe reverse of an array is ");
+              for (int i=0;i<n;i++) {
+                  System.out.println(arr[i]);
+              }
+          }
+}                  */
+
+
+
+
+/*  public class part5Arrays  {
+      public static void main(String[] args) {
+
+
+         // 102.Find the frequency of each element in an array.
+
+          Scanner scan = new Scanner(System.in);
+          System.out.println("Enter the number of elements of an array: ");
+          int n= scan.nextInt();
+
+          int[] arr=new int[n];
+          System.out.println("Enter the elements of an array");
+
+          for (int i=0;i<n;i++) {
+              arr[i]=scan.nextInt();
+          }
+
+          int [] frequency = new int[100];
+
+          for(int i=0;i<n;i++) {
+              frequency[arr[i]]++;
+          }
+
+          System.out.println("The frequency of each element is");
+          for(int i=0;i<100;i++) {
+            if (frequency[i] != 0) {
+                System.out.println(i +" " + frequency[i]);
+
+            }
+          }
+      }
+}             */
+
+
+
 
 
 
