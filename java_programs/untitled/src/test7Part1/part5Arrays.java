@@ -433,7 +433,7 @@ import java.util.Scanner;
               int start = 0;
               int end = n-1;
 
-              while (start <end ) {
+              while (start < end ) {
                   int temp = arr[start];
                   arr[start]=arr[end];
                   arr[end]= temp;
@@ -483,7 +483,53 @@ import java.util.Scanner;
             }
           }
       }
-}             */
+}                 */
+
+
+
+/*  public  class part5Arrays  {                            // did'nt get it
+      public static void main(String[] args) {
+
+         // 103.Find the missing number in a given range.
+
+          Scanner scan=new Scanner(System.in);
+          System.out.println("Enter the lowerbound of the array");
+          int lowerBound =scan.nextInt();
+
+          System.out.println("Enter the upperbound of the array");
+          int upperBound = scan.nextInt();
+
+
+          int [] numbers=new int[upperBound - lowerBound +1];
+          int missing_number=0;
+
+
+          for (int i=lowerBound;i<=upperBound;i++) {
+              numbers[i -lowerBound] = i;
+          }
+
+          for (int i=0;i<numbers.length;i++) {
+              if ( numbers[i] ==0) {
+                  missing_number = i+ lowerBound;
+                  break;
+              }
+          }
+          System.out.println("the missing number " + missing_number);
+
+
+      }
+}          */
+
+
+
+  public  class part5Arrays  {
+      public static void main(String[] args) {
+
+          // 104.Remove duplicates from an array.
+
+
+      }
+}
 
 
 

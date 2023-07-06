@@ -190,14 +190,27 @@ import java.util.Scanner;
 
 
 
- /*  public  class part4Whileloop  {
+/*   public  class part4Whileloop  {
        public static void main(String[] args) {
 
          // 66.Write a program to print the reverse of a given number using a while loop.
 
 
+           Scanner scan = new Scanner(System.in);
+           System.out.println("Enter the number");
+           int number= scan.nextInt();
+
+           int reverse = 0;
+           while (number != 0) {
+               int digit = number % 10;
+               reverse = reverse * 10 + digit;
+               number = number / 10;
+
+
+           }
+           System.out.println("THe reverse of the number is: " + reverse);
        }
-}     */
+}      */
 
 
 /*  public class part4Whileloop  {
@@ -286,15 +299,33 @@ import java.util.Scanner;
 
 
 
- /* public class part4Whileloop  {
+/*  public class part4Whileloop  {
       public static void main(String[] args) {
 
         // 70.Write a program to check if a given number is a palindrome using a while loop.
 
 
+          Scanner scan =new Scanner(System.in);
+          System.out.println("Enter the number");
+          int number = scan.nextInt();
+
+          int originalNumber = number;
+          int reverse = 0;
+
+          while (number !=0) {
+              int digit = number % 10;
+              reverse = reverse * 10 + digit;
+              number = number / 10;
+          }
+
+          if (originalNumber == reverse) {
+              System.out.println("The given number is a palindrome ");
+          } else {
+              System.out.println("The given number not a palindrome");
+          }
 
       }
-}       */
+}        */
 
 
 

@@ -128,6 +128,18 @@ import java.util.Scanner;
         // Write a program to print the reverse of a given number using a for loop.
 
 
+          Scanner scan = new Scanner(System.in);
+          System.out.println("Enter the number");
+          int number = scan.nextInt();
+
+          int reverse=0;
+          for (int i=number;i>0;i /=10) {
+              int digit = i % 10;
+              reverse = reverse * 10 + digit;
+          }
+          System.out.println("The reverse of given number : " + reverse);
+
+
       }
 }   */
 
@@ -225,15 +237,33 @@ import java.util.Scanner;
 
 
 
- /*   public  class part3Loops  {
+/*    public  class part3Loops  {
        public static void main(String[] args) {
 
          // 59.Write a program to check if a given number is a palindrome using a for loop.
 
 
+           Scanner scan = new Scanner(System.in);
+           System.out.println("Enter the number");
+           int number = scan.nextInt();
+
+           int originalNumber = number;
+           int reverse = 0;
+
+           for (int i=number;i>0;i /=10) {
+               int digit = i % 10;
+               reverse = reverse * 10 + digit;
+           }
+
+           if (originalNumber == reverse) {
+               System.out.println("The given number is a palindrome ");
+           } else  {
+               System.out.println("The given number is not a palindrome");
+           }
+
 
        }
-}   */
+}         */
 
 
 
