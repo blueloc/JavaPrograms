@@ -574,7 +574,7 @@ import java.util.Scanner;
 
 
 
-/*   public class part5Arrays {
+   public class part5Arrays {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -594,7 +594,7 @@ import java.util.Scanner;
         System.out.println(Arrays.toString(uniqueNumbers));
     }
 
-    private static int[] part5Arrays(int[] numbers) {
+  /*  private static int[] part5Arrays(int[] numbers) {
         int[] uniqueNumbers = new int[numbers.length];
         int j = 0;
         for (int i = 0; i < numbers.length; i++) {
@@ -611,8 +611,8 @@ import java.util.Scanner;
             }
         }
         return uniqueNumbers;
-    }
-}              */
+    }    */
+}
 
 
 
